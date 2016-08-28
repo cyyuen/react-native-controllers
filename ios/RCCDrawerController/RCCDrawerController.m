@@ -78,14 +78,18 @@
     }
     
     NSNumber *leftDrawerWidth = self.drawerStyle[@"leftDrawerWidth"];
-    if (leftDrawerWidth) {
-        self.maximumLeftDrawerWidth = self.view.bounds.size.width * MIN(1, (leftDrawerWidth.floatValue/100.0));
-    }
+    // if (leftDrawerWidth) {
+    //    self.maximumLeftDrawerWidth = self.view.bounds.size.width * MIN(1, (leftDrawerWidth.floatValue/100.0));
+    //}
+    	
+    self.maximumLeftDrawerWidth = self.view.bounds.size.width;
     
     NSNumber *rightDrawerWidth = self.drawerStyle[@"rightDrawerWidth"];
-    if (rightDrawerWidth) {
-        self.maximumRightDrawerWidth = self.view.bounds.size.width * MIN(1, (rightDrawerWidth.floatValue/100.0));
-    }
+    // if (rightDrawerWidth) {
+    //    self.maximumRightDrawerWidth = self.view.bounds.size.width * MIN(1, (rightDrawerWidth.floatValue/100.0));
+    // }
+   
+    self.maximumRightDrawerWidth = self.view.bounds.size.width;
     
     NSString *contentOverlayColor = self.drawerStyle[@"contentOverlayColor"];
     if (contentOverlayColor)
